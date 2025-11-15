@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Directiva ngIf/else</h1>
+  <img src="https://picsum.photos/id/237/1760/1200" alt="" />
+  <ng-template #aviso>
+    <input
+      type-="button"
+      value="Mas informacion"
+      class="info"
+      (click)="MostrarInfo = true"
+    />
+  </ng-template>
+  <div class="card" *ngIf="MostrarInfo; else aviso">
+    <h1>
+      Mascotas
+      <input
+        type="button"
+        value="X"
+        class="cerrar"
+        (click)="MostrarInfo = false"
+      />
+    </h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde harum
+      facere quidem et nisi nihil doloremque, laborum repellat excepturi placeat
+      sint at, officiis eligendi modi tempora non numquam beatae molestiae. Odit
+      nemo, ab vero quo soluta recusandae voluptate voluptates dolor delectus
+      libero dolorum cumque. Iste provident repudiandae beatae recusandae et
+      cupiditate dolore amet eos doloremque, eligendi impedit corporis expedita
+      sunt?
+    </p>
+    <input
+      type="button"
+      value="Cerrar"
+      class="cerrar"
+      (click)="MostrarInfo = false"
+    />
+  </div>
+</div>

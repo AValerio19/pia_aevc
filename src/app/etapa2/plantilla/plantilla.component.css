@@ -1,0 +1,130 @@
+/* ================================================= */
+/* 1. Contenedor Principal y Título */
+/* ================================================= */
+
+div {
+  background-color: #e1ded9; /* CLARO: Fondo principal del contenedor */
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra profunda */
+  margin: 30px auto;
+  max-width: 500px;
+  display: flex; /* Usar Flexbox para organizar elementos */
+  flex-direction: column;
+  border-top: 6px solid #a9c4c4; /* AZUL CLARO: Borde de acento */
+}
+
+h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e4b55d; /* AMARILLO: Línea separadora */
+}
+
+/* ================================================= */
+/* 2. Estilos de Elementos de Formulario */
+/* ================================================= */
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #004466; /* AZUL PROFUNDO: Texto de etiqueta */
+  font-weight: bold;
+  font-size: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 12px;
+  border: 2px solid #a9c4c4; /* AZUL CLARO: Borde suave */
+  border-radius: 6px;
+  font-size: 1em;
+  color: #004466;
+  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 5px; /* Pequeño margen bajo el input */
+}
+
+input:focus {
+  border-color: #e4b55d; /* AMARILLO: Borde de acento al enfocar */
+  box-shadow: 0 0 8px rgba(228, 181, 93, 0.7);
+  outline: none;
+}
+
+/* Área de texto de Datos (Resultado) */
+textarea {
+  padding: 12px;
+  border: 2px solid #755468; /* GRIS PÚRPURA: Borde para distinguir */
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #e1ded9; /* CLARO: Texto en el área de datos */
+  background-color: #004466; /* AZUL PROFUNDO: Fondo del área de datos */
+  font-family: monospace;
+  resize: none; /* Evita que el usuario cambie el tamaño */
+  margin-bottom: 20px;
+}
+
+/* ================================================= */
+/* 3. Estilos de Botones */
+/* ================================================= */
+
+input[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+/* Botón "imprimir" (enviar) */
+.enviar {
+  order: 1; /* Posiciona el botón arriba de la textarea */
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+}
+
+.enviar:hover {
+  background-color: #755468; /* GRIS PÚRPURA: Hover sutil */
+  color: #e1ded9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón "limpiar" */
+.limpiar {
+  order: 3; /* Posiciona el botón al final */
+  background-color: #a9c4c4; /* AZUL CLARO: Fondo de limpieza */
+  color: #004466;
+  border: 1px solid #004466;
+  margin-top: 5px;
+}
+
+.limpiar:hover {
+  background-color: #e4b55d; /* AMARILLO: Hover notorio */
+  color: #004466;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Reordenar elementos para que el botón de imprimir esté cerca de los inputs */
+/* Si el código HTML no permite reordenar con flex-box, se mostrarán en orden. */
+/* Asumiendo que el HTML está en el orden mostrado y solo se aplica estilo al div principal */
+
+label[for="datos"] {
+  order: 4; /* Etiqueta de Datos abajo */
+  margin-top: 25px;
+}
+
+textarea {
+  order: 5; /* Textarea después de su etiqueta */
+  margin-top: 5px;
+}
+
+.limpiar {
+  order: 6;
+}

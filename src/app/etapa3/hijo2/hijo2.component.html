@@ -1,0 +1,9 @@
+<div>
+    <h2>Componente Hijo</h2>
+    <form>
+        <input type="text" placeholder="Ingresa un mensaje" #InputMensaje>
+        <button (click)="enviarMensaje(InputMensaje.value); InputMensaje.value = ''">
+            Enviar mensaje al padre
+        </button>
+    </form>
+</div>

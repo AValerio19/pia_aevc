@@ -1,0 +1,27 @@
+<div class="">
+  <h1>Variables de Plantilla</h1>
+  <label for="nombre">Nombre: </label>
+  <input type="text" placeholder="Ingrese su nombre" #name />
+
+  <label for="apellido">Apellido: </label>
+  <input type="text" placeholder="Ingrese su apellido" #lastname />
+
+  <label for="correo">Correo: </label>
+  <input type="email" placeholder="Ingrese su correo" #mail />
+
+  <label for="telefono">Teléfono: </label>
+  <input type="tel" placeholder="Ingrese su teléfono" #phone />
+
+  <input
+    type="submit"
+    class="enviar"
+    value="imprimir"
+    (click)="MostrarDatos(name.value, lastname.value, mail.value, phone.value)"
+  />
+
+  <label for="datos">Datos: </label>
+  <textarea readonly name="datos" id="" cols="30" rows="10">{{
+    datos
+  }}</textarea>
+  <input type="submit" class="limpiar" value="limpiar" (click)="datos = ''" />
+</div>

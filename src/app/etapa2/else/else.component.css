@@ -1,0 +1,133 @@
+/* ================================================= */
+/* 1. Contenedor Principal y Título */
+/* ================================================= */
+
+.container {
+  background-color: #e1ded9; /* CLARO: Fondo principal del contenedor */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  border-top: 6px solid #a9c4c4; /* AZUL CLARO: Borde de acento */
+}
+
+.container h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e4b55d; /* AMARILLO: Línea separadora */
+}
+
+/* Imagen de la directiva */
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================================= */
+/* 2. Botón de Aviso (ng-template #aviso) */
+/* ================================================= */
+
+/* El ng-template envuelve un input type="button", así que apuntamos a esa clase .info */
+.container input.info {
+  /* CLAVE: Destacar el botón de aviso */
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  /* Corrección del HTML: el atributo es 'type' */
+  /* Asegurar que se muestre como botón */
+  display: inline-block;
+  width: auto;
+}
+
+.container input.info:hover {
+  background-color: #755468; /* GRIS PÚRPURA: Hover */
+  color: #e1ded9;
+}
+
+.container input.info:active {
+  transform: translateY(1px);
+}
+
+/* ================================================= */
+/* 3. Estilos de la Tarjeta (ngIf) */
+/* ================================================= */
+
+.card {
+  background-color: #755468; /* GRIS PÚRPURA: Fondo de la tarjeta */
+  color: #e1ded9; /* CLARO: Texto principal */
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-out; /* Opcional: animación de entrada */
+}
+
+/* Título dentro de la tarjeta */
+.card h1 {
+  color: #e4b55d; /* AMARILLO: Título de acento */
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a9c4c4;
+  display: flex; /* Para alinear el botón X */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Párrafo de contenido */
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botones de cierre (X y Cerrar) */
+.card input.cerrar {
+  background-color: #004466; /* AZUL PROFUNDO: Fondo del botón de cierre */
+  color: #e4b55d; /* AMARILLO: Texto de cierre */
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón 'X' de la cabecera */
+.card h1 input.cerrar {
+  padding: 5px 10px;
+  font-size: 1em;
+}
+
+.card input.cerrar:hover {
+  background-color: #a9c4c4; /* AZUL CLARO: Hover */
+  color: #004466;
+}
+
+/* Animación opcional */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,113 @@
+/* ================================================= */
+/* Estilos del Contenedor Principal (Formulario) */
+/* ================================================= */
+
+.container {
+  background-color: #e1ded9; /* CLARO: Fondo principal del contenedor */
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra marcada y profunda */
+  margin: 30px auto;
+  max-width: 500px;
+  border-top: 6px solid #e4b55d; /* AMARILLO: Borde de acento fuerte */
+}
+
+.container h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora */
+}
+
+/* ================================================= */
+/* Estilos de Elementos del Formulario */
+/* ================================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #004466; /* AZUL PROFUNDO: Texto de etiqueta */
+  font-weight: bold;
+  font-size: 1em;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 2px solid #a9c4c4; /* AZUL CLARO: Borde suave */
+  border-radius: 6px;
+  font-size: 1em;
+  color: #004466;
+  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #e4b55d; /* AMARILLO: Borde de acento al enfocar */
+  box-shadow: 0 0 8px rgba(228, 181, 93, 0.7);
+  outline: none;
+}
+
+/* ================================================= */
+/* Estilos de Botón */
+/* ================================================= */
+
+button.enviar {
+  padding: 12px 20px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Colores primarios */
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+}
+
+button.enviar:hover {
+  background-color: #755468; /* GRIS PÚRPURA: Hover sutil */
+  color: #e1ded9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button.enviar:active {
+  transform: translateY(1px); /* Efecto de "clic" */
+}
+
+/* ================================================= */
+/* Estilos para Demostración (ng-container) */
+/* ================================================= */
+
+.container ng-container {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #755468; /* GRIS PÚRPURA: Separador */
+  text-align: left;
+  display: block; /* Asegurar que ng-container se comporte como bloque */
+}
+
+.container ng-container h1 {
+  font-size: 1.4em;
+  color: #755468; /* GRIS PÚRPURA: Título de demostración */
+  border-bottom: none;
+  text-align: center;
+}
+
+.container ng-container p {
+  color: #e1ded9; /* CLARO: Texto en el fondo oscuro del body */
+  background-color: #004466; /* AZUL PROFUNDO: Fondo de la línea de datos */
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-family: monospace;
+}

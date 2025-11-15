@@ -1,0 +1,121 @@
+/* ================================================= */
+/* 1. Contenedor Principal y Título */
+/* ================================================= */
+
+.container {
+  background-color: #e1ded9; /* CLARO: Fondo principal del contenedor */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  margin: 30px auto;
+  max-width: 1000px;
+  text-align: center;
+  border-top: 6px solid #e4b55d; /* AMARILLO: Borde de acento */
+}
+
+.container h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 2em;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora */
+}
+
+/* ================================================= */
+/* 2. Contenedor de la Lista (Grid Layout) */
+/* ================================================= */
+
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* 3 columnas responsivas */
+  gap: 25px;
+  padding: 10px;
+}
+
+/* ================================================= */
+/* 3. Estilos de la Tarjeta Individual (Card) */
+/* ================================================= */
+
+.card {
+  background-color: #755468; /* GRIS PÚRPURA: Fondo de la tarjeta */
+  border-radius: 10px;
+  overflow: hidden; /* Asegura que la imagen no se salga */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #e4b55d;
+}
+
+/* Contenedor de datos internos */
+.datos {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen del maestro */
+.datos img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 3px solid #a9c4c4; /* AZUL CLARO: Borde de imagen */
+}
+
+/* Nombre del maestro */
+.datos h2 {
+  color: #e1ded9; /* CLARO: Título de nombre */
+  font-size: 1.4em;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+/* Datos individuales (Edad, Materia, Activo) */
+.datos b {
+  color: #e4b55d; /* AMARILLO: Destacar la información */
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  background-color: #004466; /* AZUL PROFUNDO: Fondo para la info */
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block; /* Para que cada 'b' ocupe su propio espacio */
+  width: 80%;
+  text-align: center;
+}
+
+/* ================================================= */
+/* 4. Estilos del Botón */
+/* ================================================= */
+
+.boton {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.boton input.info {
+  width: 90%;
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.boton input.info:hover {
+  background-color: #a9c4c4; /* AZUL CLARO: Hover */
+  color: #004466;
+}

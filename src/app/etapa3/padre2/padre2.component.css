@@ -1,0 +1,43 @@
+/* ================================================= */
+/* Estilos del Contenedor Principal (Componente Padre) */
+/* ================================================= */
+
+div {
+  background-color: #755468; /* GRIS PÚRPURA: Fondo principal para distinguir del body */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* Sombra muy marcada */
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  border: 3px solid #e4b55d; /* AMARILLO: Borde de acento fuerte */
+}
+
+/* Título principal */
+h1 {
+  color: #e1ded9; /* CLARO: Título claro para el fondo oscuro */
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e4b55d; /* AMARILLO: Línea separadora de acento */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Párrafo del mensaje recibido */
+p {
+  background-color: #004466; /* AZUL PROFUNDO: Fondo para el mensaje */
+  color: #e4b55d; /* AMARILLO: Texto de acento */
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* El componente hijo (app-hijo2) tendrá sus propios estilos,
+   pero si se necesita un espacio, se le podría dar aquí */
+app-hijo2 {
+  display: block;
+  margin-top: 20px;
+}

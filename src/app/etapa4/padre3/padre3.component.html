@@ -1,0 +1,8 @@
+<div>
+  <h1>Registro de Nombres (Componente Padre)</h1>
+  <input type="text" #nameInput placeholder="Ingresa un nombre" />
+  <button (click)="addName(nameInput.value)" nameInput.value="">
+    Agregar Nombre
+  </button>
+</div>
+<app-hijo3></app-hijo3>

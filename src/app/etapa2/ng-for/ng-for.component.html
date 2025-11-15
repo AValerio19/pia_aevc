@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Directiva NgFor</h1>
+  <div class="container1">
+    <div class="card" *ngFor="let maestro of ListaMaestros; let i = index">
+      <div class="datos">
+        <img [src]="maestro.img_url" alt="Imagen de {{ maestro.nombre }}" />
+        <h2>{{ maestro.nombre }}</h2>
+        <b>{{ maestro.edad }}</b>
+        <b>{{ maestro.materia }}</b>
+        <b>{{ maestro.activo }}</b>
+        <div class="boton">
+          <input type="button" value="Contacto" class="info" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

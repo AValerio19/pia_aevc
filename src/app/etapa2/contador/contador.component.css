@@ -1,0 +1,86 @@
+/* ================================================= */
+/* Título */
+/* ================================================= */
+
+h1 {
+  color: #e4b55d; /* AMARILLO: Título de acento */
+  font-size: 2.2em;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================================= */
+/* Contenedor del Contador */
+/* ================================================= */
+
+.contadorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: #755468; /* GRIS PÚRPURA: Fondo del módulo */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  border: 3px solid #a9c4c4; /* AZUL CLARO: Borde sutil */
+}
+
+/* ================================================= */
+/* Botones de Operación (+ / -) */
+/* ================================================= */
+
+.contadorContainer button {
+  padding: 15px 25px;
+  min-width: 60px;
+
+  /* Colores base: AMARILLO con texto AZUL PROFUNDO */
+  background-color: #e4b55d;
+  color: #004466;
+
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contadorContainer button:hover {
+  background-color: #a9c4c4; /* AZUL CLARO: Hover notorio */
+  color: #004466;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contadorContainer button:active {
+  transform: translateY(2px); /* Efecto de "clic" */
+}
+
+/* ================================================= */
+/* Display del Número */
+/* ================================================= */
+
+.contadorContainer span {
+  /* Contenedor del número (para darle un fondo distintivo) */
+  background-color: #004466; /* AZUL PROFUNDO: Fondo de display */
+  border-radius: 8px;
+  min-width: 100px;
+  padding: 10px 15px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna para efecto de pantalla */
+}
+
+.contadorContainer p {
+  /* El número en sí */
+  color: #e1ded9; /* CLARO: Texto del número */
+  font-size: 2.5em;
+  font-family: monospace; /* Fuente de pantalla digital */
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 5px #e4b55d; /* Sutil brillo AMARILLO */
+}

@@ -1,0 +1,19 @@
+/* Estilo para el contenedor general del contenido */
+article {
+  margin-top: 3em;
+  flex-grow: 1;
+  padding: 25px; /* Padding adicional para separar el contenido de los bordes */
+  overflow-y: auto;
+}
+
+/* Estilo para el título H1 dentro del contenido */
+article h1 {
+  color: #e4b55d; /* AMARILLO: Color de acento fuerte */
+  font-size: 2.2em;
+  font-weight: bolder;
+  margin-top: 0; /* Asegura que el h1 no añada margen adicional que empuje el contenido */
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #755468; /* GRIS PÚRPURA: Línea separadora elegante */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el texto */
+}

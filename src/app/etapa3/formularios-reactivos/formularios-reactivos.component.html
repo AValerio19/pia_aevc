@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Forms Reactivos (FormControl, Validators, FormGroup y FormBuilder)</h1>
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+        <label for="nombre">Nombre <span>*</span></label>
+        <input type="text" id="nombre" formControlName="nombre" placeholder="Ingresa tu nombre">
+        <div class="alerta" *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched">
+            <div *ngIf="registroForm.get('nombre')?.hasError">El nombre es obligatorio</div>
+        </div>
+
+        <label for="email">Correo Electronico <span>*</span></label>
+        <input type="text" id="email" formControlName="email" placeholder="Ingresa tu correo electronico">
+        <div class="alerta" *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched">
+            <div *ngIf="registroForm.get('email')?.hasError('required')">El correo electronico es obligatorio</div>
+            <div *ngIf="registroForm.get('email')?.hasError('email')">El correo electronico debe ser valido</div>
+        </div>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento <span>*</span></label>
+        <input type="text" id="fechaNacimiento" formControlName="fecha" placeholder="Ingresa tu fecha de Nacimiento">
+        <div class="alerta" *ngIf="registroForm.get('fecha')?.invalid && registroForm.get('fecha')?.touched">
+            <div *ngIf="registroForm.get('fecha')?.hasError('required')">La fecha de nacimiento es obligatorio</div>
+            <div *ngIf="registroForm.get('fecha')?.hasError('pattern')">El formato de fecha es incorrecto (YYYY-MM-DD)</div>
+        </div>
+
+        <label for="password">Contraseña <span>*</span></label>
+        <input type="password" id="password" formControlName="password">
+        <div class="alerta" *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
+            <div *ngIf="registroForm.get('password')?.hasError('required')">La fecha de nacimiento es obligatorio</div>
+        </div>
+
+        <span>* Campo Obligatorio</span>
+        <button type="submit" [class]="{
+            'enviar':registroForm.valid,
+            'deshabilitado':registroForm.invalid
+        }" [disabled]="registroForm.invalid">Registrarse</button>
+    </form>
+    <ng-container *ngIf="mostrarDatos">
+        <h1>Datos Verificados</h1>
+        Nombre: {{registroForm.get('nombre')?.value}} <br>
+        Correo: {{registroForm.get('email')?.value}} <br>
+        Fecha de Nacimiento: {{registroForm.get('fecha')?.value}} <br>
+        Contraseña: {{registroForm.get('password')?.value}} <br>
+    </ng-container>
+</div>

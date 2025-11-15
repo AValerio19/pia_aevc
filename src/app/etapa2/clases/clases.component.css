@@ -1,0 +1,192 @@
+* {
+  font-family: Roboto;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Clase1 {
+  color: red;
+} /* ================================================= */
+/* Estilos Generales del Contenedor (para los 3 ejemplos) */
+/* ================================================= */
+
+.container {
+  background-color: #e1ded9; /* CLARO: Fondo principal del contenedor */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra profunda */
+  margin: 30px auto;
+  max-width: 650px;
+  border-top: 6px solid #a9c4c4; /* AZUL CLARO: Borde de acento */
+  text-align: center;
+}
+
+.container h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e4b55d; /* AMARILLO: Línea separadora */
+}
+
+/* Contenedores de botones */
+.container > div {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #a9c4c4;
+}
+
+/* ================================================= */
+/* Estilos de Botones Base y Hover */
+/* ================================================= */
+
+button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: 2px solid #004466; /* AZUL PROFUNDO: Borde base */
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: #a9c4c4; /* AZUL CLARO: Fondo base */
+  color: #004466;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover:not([disabled]) {
+  background-color: #e4b55d; /* AMARILLO: Hover notorio */
+  color: #004466;
+  border-color: #e4b55d;
+}
+
+/* ================================================= */
+/* 1. Estilos de las Clases aplicadas al texto (Clase Única y Booleana) */
+/* ================================================= */
+
+p {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #004466;
+  background-color: #f7f7f7; /* Fondo sutil para el texto */
+  transition: all 0.5s ease;
+}
+
+/* Clases dinámicas */
+.Clase1 {
+  color: #e4b55d; /* AMARILLO */
+  background-color: #004466; /* AZUL PROFUNDO */
+  border: 2px dashed #e4b55d;
+}
+
+.Clase2 {
+  color: #004466;
+  background-color: #a9c4c4; /* AZUL CLARO */
+  border: 2px solid #004466;
+}
+
+.Clase3 {
+  color: #e1ded9; /* CLARO */
+  background-color: #755468; /* GRIS PÚRPURA */
+  border: 2px solid #e1ded9;
+  box-shadow: 0 0 10px #755468;
+}
+
+/* ================================================= */
+/* 2. Estilos Booleanos (Deshabilitar) */
+/* ================================================= */
+
+button.deshabilitado,
+button[disabled] {
+  background-color: #d3d3d3; /* Gris claro (fuera de paleta, para simular apagado) */
+  color: #755468;
+  border-color: #755468;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* ================================================= */
+/* 3. Estilos de Clases Múltiples Booleanas */
+/* ================================================= */
+
+/* Botones de toggle (Grande, Cursiva, Subrayado) */
+button.seleccionado {
+  background-color: #e4b55d; /* AMARILLO: Fondo de activo */
+  color: #004466;
+  border-color: #004466;
+  box-shadow: 0 0 10px rgba(228, 181, 93, 0.8);
+}
+
+/* Span contenedor para el texto con estilo múltiple */
+span[class] {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #755468;
+  border-radius: 8px;
+}
+
+span[class] p {
+  /* Reinicia los estilos base del párrafo */
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* Clases de texto booleanas */
+.grande {
+  font-size: 1.5em;
+  color: #e4b55d;
+}
+
+.cursiva {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.subrayado {
+  text-decoration: underline 3px #004466;
+  text-underline-offset: 4px;
+}
+
+.Clase2 {
+  color: green;
+}
+
+.Clase3 {
+  color: blue;
+}
+
+.deshabilitado {
+  pointer-events: none;
+  color: gray;
+}
+
+.grande {
+  font-size: large;
+}
+
+.cursiva {
+  font-style: italic;
+}
+
+.subrayado {
+  text-decoration: underline;
+}
+
+.seleccionado {
+  border: solid green;
+}

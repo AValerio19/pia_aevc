@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Forms Basados en Plantillas con validaciones</h1>
+    <form #registroForm="ngForm" (ngSubmit)="submitForm2(registroForm)">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre" required #nombre="ngModel">
+        <div class="alerta" [hidden]="nombre.valid || nombre.pristine">El nombre es obligatorio</div>
+
+        <label for="email">Correo Electronico </label>
+        <input type="text" id="email" name="email" [(ngModel)]="usuario.email" required #correo="ngModel">
+        <div class="alerta" [hidden]="correo.valid || correo.pristine">El correo es obligatorio</div>
+
+        <label for="password">Contraseña: </label>
+        <input type="text" id="password" name="password" [(ngModel)]="usuario.password" required #contra="ngModel">
+        <div class="alerta" [hidden]="contra.valid || contra.pristine">La contraseña es obligatorio</div>
+
+        <button [class]="{'enviar':registroForm.valid, 'deshabilitado':!registroForm.valid}" type="submit" 
+        [disabled]="!registroForm.valid">Registrarse</button>
+    </form>
+    <ng-container *ngIf="mostrar">
+        <h1>Demostracion de ngModel: </h1>
+        <p>Nombre = {{usuario.nombre}}</p>
+        <p>Email = {{usuario.email}}</p>
+        <p>Password = {{usuario.password}}</p>
+    </ng-container>
+</div>

@@ -1,0 +1,158 @@
+/* ================================================= */
+/* 1. Contenedor Principal y Título */
+/* ================================================= */
+
+.container {
+  background-color: #e1ded9; /* CLARO: Fondo principal del formulario */
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra profunda */
+  margin: 30px auto;
+  max-width: 550px;
+  border-top: 6px solid #e4b55d; /* AMARILLO: Borde de acento fuerte */
+}
+
+.container h1 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora */
+}
+
+/* ================================================= */
+/* 2. Estilos de Elementos del Formulario */
+/* ================================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #004466; /* AZUL PROFUNDO: Texto de etiqueta */
+  font-weight: bold;
+  font-size: 1em;
+}
+
+label span {
+  color: #e4b55d; /* AMARILLO: Destacar el asterisco de obligatorio */
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border: 2px solid #a9c4c4; /* AZUL CLARO: Borde */
+  border-radius: 6px;
+  font-size: 1em;
+  color: #004466;
+  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estado de enfoque (Focus) */
+input:focus {
+  border-color: #e4b55d; /* AMARILLO: Borde de acento al enfocar */
+  box-shadow: 0 0 8px rgba(228, 181, 93, 0.7);
+  outline: none;
+}
+
+/* Estado de Error (ng-invalid y ng-touched) */
+input.ng-invalid.ng-touched {
+  border-color: #755468; /* GRIS PÚRPURA: Borde para indicar error */
+  box-shadow: 0 0 5px rgba(117, 84, 104, 0.8);
+}
+
+/* Texto de apoyo "Campo Obligatorio" */
+form > span {
+  color: #755468; /* GRIS PÚRPURA */
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+
+/* ================================================= */
+/* 3. Mensajes de Alerta (Validación) */
+/* ================================================= */
+
+.alerta {
+  color: #e1ded9; /* CLARO: Texto de alerta */
+  background-color: #755468; /* GRIS PÚRPURA: Fondo de alerta (Contraste alto) */
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-left: 5px solid #e4b55d; /* AMARILLO: Borde de acento fuerte */
+}
+
+/* Quitar el padding extra de los div anidados */
+.alerta > div {
+  padding: 0;
+  margin: 0;
+}
+
+/* ================================================= */
+/* 4. Botón de Envío (Estados) */
+/* ================================================= */
+
+button {
+  padding: 12px 20px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado Habilitado (clase 'enviar') */
+button.enviar {
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+}
+
+button.enviar:hover {
+  background-color: #a9c4c4; /* AZUL CLARO: Hover sutil */
+  color: #004466;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estado Deshabilitado (clase 'deshabilitado') */
+button.deshabilitado[disabled] {
+  background-color: #a9c4c4; /* AZUL CLARO: Fondo deshabilitado */
+  color: #004466;
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================================================= */
+/* 5. Estilos para la Demostración de Datos */
+/* ================================================= */
+
+.container ng-container {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #755468; /* GRIS PÚRPURA: Separador */
+  text-align: left;
+  display: block;
+  color: #004466; /* Texto para los datos verificado */
+}
+
+.container ng-container h1 {
+  font-size: 1.4em;
+  color: #755468;
+  border-bottom: none;
+  text-align: center;
+}
+
+.container ng-container br {
+  line-height: 1.5; /* Espaciado extra para mejor lectura */
+}

@@ -1,0 +1,66 @@
+/* Estilos para el contenedor principal (div) */
+div {
+  background-color: #e1ded9; /* CLARO: Fondo suave para el formulario */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+  margin: 30px auto; /* Centrar y separar de los bordes */
+  max-width: 500px;
+  text-align: center;
+  border-top: 5px solid #e4b55d; /* AMARILLO: Borde superior de acento */
+}
+
+/* Título */
+h1 {
+  color: #004466; /* AZUL PROFUNDO: Color del título */
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora */
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* Campo de entrada de texto */
+input[type="text"] {
+  width: 70%;
+  padding: 12px 15px;
+  margin-right: 10px;
+  border: 2px solid #a9c4c4; /* AZUL CLARO: Borde suave */
+  border-radius: 6px;
+  font-size: 1em;
+  color: #004466;
+  background-color: white;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #e4b55d; /* AMARILLO: Borde de acento al enfocar */
+  box-shadow: 0 0 8px rgba(228, 181, 93, 0.8); /* Sombra amarilla al enfocar */
+  outline: none;
+}
+
+/* Botón */
+button {
+  padding: 12px 20px;
+  /* Colores primarios del botón */
+  background-color: #e4b55d; /* AMARILLO: Fondo fuerte */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+  white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+/* Hover y Active (interacción del botón) */
+button:hover {
+  background-color: #755468; /* GRIS PÚRPURA: Fondo al hacer hover */
+  color: #e1ded9; /* CLARO: Texto en hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(1px); /* Efecto de "clic" */
+}

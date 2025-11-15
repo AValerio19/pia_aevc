@@ -1,0 +1,47 @@
+/* Estilos para el contenedor principal de la lista */
+div {
+  background-color: #e1ded9; /* CLARO: Fondo suave para que el contenido resalte */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra marcada */
+  margin: 20px auto;
+  max-width: 400px;
+  border-left: 5px solid #e4b55d; /* AMARILLO: Borde de acento */
+}
+
+/* Título */
+h2 {
+  color: #004466; /* AZUL PROFUNDO: Color de texto */
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora suave */
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+/* Lista no ordenada */
+ul {
+  list-style: none; /* Quitar el marcador de lista predeterminado */
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Elementos de la lista */
+li {
+  background-color: #f0f0f0; /* Fondo de cada elemento */
+  color: #004466; /* AZUL PROFUNDO: Texto */
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  transition: background-color 0.3s, transform 0.3s;
+  border-left: 5px solid #755468; /* GRIS PÚRPURA: Acento lateral */
+}
+
+/* Hover: Hace el elemento más notorio al pasar el ratón */
+li:hover {
+  background-color: #a9c4c4; /* AZUL CLARO: Fondo de hover notorio */
+  color: #004466; /* AZUL PROFUNDO: Texto contrastante */
+  transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

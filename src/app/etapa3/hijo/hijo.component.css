@@ -1,0 +1,42 @@
+/* ================================================= */
+/* Estilos del Contenedor Principal (Componente Hijo) */
+/* ================================================= */
+
+div {
+  background-color: #e1ded9; /* CLARO: Fondo que contrasta con el body oscuro */
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+  border-right: 5px solid #e4b55d; /* AMARILLO: Acento lateral derecho */
+}
+
+/* Título */
+h2 {
+  color: #004466; /* AZUL PROFUNDO: Título principal */
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #a9c4c4; /* AZUL CLARO: Línea separadora sutil */
+}
+
+/* Párrafo del mensaje recibido */
+p {
+  background-color: #755468; /* GRIS PÚRPURA: Fondo del mensaje */
+  color: #e1ded9; /* CLARO: Texto principal */
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Resalta el valor inyectado (aunque no se puede seleccionar directamente con CSS,
+   se aplica al contenedor, dando énfasis al mensaje completo) */
+p strong {
+  color: #e4b55d; /* AMARILLO: Destaca el valor */
+}
