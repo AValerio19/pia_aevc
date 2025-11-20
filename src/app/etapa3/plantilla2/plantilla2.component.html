@@ -2,10 +2,10 @@
   <h1>Forms Basados en Plantillas</h1>
   <form #registroForm="ngForm" (ngSubmit)="submitForm(registroForm)">
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" (ngModel)="(usuario.nombre)" />
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre" />
 
     <label for="email">Correo Electronico </label>
-    <input type="text" id="email" name="email" (ngModel)="(usuario.email)" />
+    <input type="text" id="email" name="email" [(ngModel)]="usuario.email" />
 
     <label for="password">Contraseña: </label>
     <input
